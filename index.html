@@ -339,8 +339,25 @@
         setInterval(updateClock, 1000);
     </script>
 
+<style>
+    .image-gallery {
+        display: flex; /* 启用弹性盒子 */
+        flex-wrap: wrap; /* 关键：允许子元素换行 */
+        gap: 10px; /* 设置图片之间的间距 */
+    }
+    .image-gallery img {
+        width: 150px; /* 设置一个基础宽度 */
+        height: 150px; /* 固定高度，通常与宽度一致形成正方形 */
+        object-fit: cover; /* 关键：让图片覆盖整个区域，不变形 */
+    }
+</style>
 
-    <img src="1.png" alt="座位安排"><br>
-    <img src="2.png" alt="学生学号"><br>
+<div class="image-gallery">
+    <img src="1.png" alt="座位安排">
+    <img src="2.png" alt="学生学号">
+    <!-- 更多图片会自动换行 -->
+</div>
+    
+   
 </body>
 </html>
